@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>音声スケジュール</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="container">
+  <header>
+    <h1>音声スケジュール</h1>
+  </header>
+
+  <main>
+    <section id="voice-section" class="card">
+      <button id="mic-btn" type="button">🎤 話して予定を追加</button>
+      <p id="mic-status" class="hint"></p>
+      <p id="transcript"></p>
+    </section>
+
+    <section id="confirm-section" class="card" hidden>
+      <h2 id="confirm-title">内容を確認</h2>
+      <ul id="warnings-list" class="warnings"></ul>
+      <form id="confirm-form">
+        <label>
+          タイトル
+          <input type="text" id="field-title" required>
+        </label>
+        <label>
+          場所（任意）
+          <input type="text" id="field-location">
+        </label>
+        <label>
+          日付
+          <input type="date" id="field-date" required>
+        </label>
+        <label class="allday-row">
+          <input type="checkbox" id="field-allday">
+          終日
+        </label>
+        <label id="time-row">
+          時刻
+          <input type="time" id="field-time">
+        </label>
+        <div class="form-actions">
+          <button type="submit" class="primary">保存</button>
+          <button type="button" id="cancel-btn">キャンセル</button>
+        </div>
+      </form>
+    </section>
+
+    <section class="card">
+      <button id="manual-add-btn" type="button">＋ 手動で予定を追加</button>
+    </section>
+
+    <section id="calendar-section" class="card">
+      <div class="calendar-header">
+        <button id="cal-prev" type="button" aria-label="前の月">‹</button>
+        <h2 id="cal-month-label"></h2>
+        <button id="cal-next" type="button" aria-label="次の月">›</button>
+      </div>
+      <button id="cal-today-btn" type="button" class="today-btn">今日</button>
+      <div class="calendar-weekdays">
+        <span class="sunday">日</span><span>月</span><span>火</span><span>水</span><span>木</span><span>金</span><span class="saturday">土</span>
+      </div>
+      <div id="calendar-grid" class="calendar-grid"></div>
+    </section>
+
+    <section class="card">
+      <div class="list-header">
+        <h2 id="list-title">予定一覧</h2>
+        <button id="clear-filter-btn" type="button" hidden>すべて表示</button>
+      </div>
+      <ul id="event-list"></ul>
+      <p id="empty-message" class="hint">まだ予定がありません</p>
+    </section>
+  </main>
+</div>
+
+<script src="script.js" defer></script>
+</body>
+</html>
