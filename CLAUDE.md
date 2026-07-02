@@ -2,6 +2,9 @@
 
 This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
 
+## GitHubリポジトリ
+https://github.com/claudetsukattemiru-crypto/schedule-app
+
 ## Project status
 
 This is a brand-new Flutter app, currently pre-code. The agreed architecture and implementation order live in the approved plan at `C:\Users\rhoso\.claude\plans\rosy-orbiting-meteor.md` — read it before scaffolding the project so the structure below is created consistently.
