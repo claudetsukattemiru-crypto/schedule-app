@@ -1,6 +1,9 @@
 # Claude Code local session state
 .claude/
 
+# Local dev notes (contain local machine paths/usernames, kept out of the public repo)
+/作業ログ/
+
 # Miscellaneous
 *.class
 *.log

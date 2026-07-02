@@ -7,7 +7,7 @@ https://github.com/claudetsukattemiru-crypto/schedule-app
 
 ## Project status
 
-This is a brand-new Flutter app, currently pre-code. The agreed architecture and implementation order live in the approved plan at `C:\Users\rhoso\.claude\plans\rosy-orbiting-meteor.md` — read it before scaffolding the project so the structure below is created consistently.
+The core app (data model, Japanese datetime parser, voice input, UI) is implemented per the originally approved plan (kept locally outside this repo); the structure below reflects that plan.
 
 A separate, lightweight **Web prototype** also exists at `web-prototype/` (plain HTML/CSS/JS — `index.html` / `style.css` / `script.js`, no build step). It is independent of the Flutter app below: same product idea and the same "never auto-save from voice" rule, but its own throwaway implementation (Web Speech API instead of `speech_to_text`, `localStorage` instead of Drift, no sync-readiness fields). Don't conflate the two — changes to one are not expected to touch the other. See `## Web prototype` below for details.
 
